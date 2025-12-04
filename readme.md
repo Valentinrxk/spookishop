@@ -5,7 +5,7 @@
 A fully responsive and functional ecommerce project made entirely with pure CSS/JavaScript.
 Features such as form validation, creation of users using localStorage, functional shop, between others.
 
-[🔸Deploy](https://spookyshop.vercel.app/).
+[🔸Deploy](https://valentinrxk.github.io/spookishop/).
 
 <img src="https://iili.io/HF7fVQs.png" alt="preview" border="0">
 
