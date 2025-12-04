@@ -12,20 +12,20 @@ const colorFilterContainer = document.querySelector(".color-filter"),
 const dropdown = (container, title) => {
   title.addEventListener("click", () => {
     container.classList.toggle("dropdown-closed");
-    if (title.innerHTML === `<i class="fa-solid fa-caret-down"></i>By color`) {
-      title.innerHTML = `<i class="fa-solid fa-caret-right"></i>By color`;
+    if (title.innerHTML === `<i class="fa-solid fa-caret-down"></i>Por color`) {
+      title.innerHTML = `<i class="fa-solid fa-caret-right"></i>Por color`;
     } else if (
-      title.innerHTML === `<i class="fa-solid fa-caret-right"></i>By color`
+      title.innerHTML === `<i class="fa-solid fa-caret-right"></i>Por color`
     ) {
-      title.innerHTML = `<i class="fa-solid fa-caret-down"></i>By color`;
+      title.innerHTML = `<i class="fa-solid fa-caret-down"></i>Por color`;
     } else if (
-      title.innerHTML === `<i class="fa-solid fa-caret-down"></i>By type`
+      title.innerHTML === `<i class="fa-solid fa-caret-down"></i>Por tipo`
     ) {
-      title.innerHTML = `<i class="fa-solid fa-caret-right"></i>By type`;
+      title.innerHTML = `<i class="fa-solid fa-caret-right"></i>Por tipo`;
     } else if (
-      title.innerHTML === `<i class="fa-solid fa-caret-right"></i>By type`
+      title.innerHTML === `<i class="fa-solid fa-caret-right"></i>Por tipo`
     ) {
-      title.innerHTML = `<i class="fa-solid fa-caret-down"></i>By type`;
+      title.innerHTML = `<i class="fa-solid fa-caret-down"></i>Por tipo`;
     }
   });
 };
@@ -60,24 +60,24 @@ const renderCard = (products) => {
   <div class="title">
       <h5>${title}</h5>
   </div>
-  <img src="${image}" alt="product image" draggable="false">
+  <img src="${image}" alt="imagen del producto" draggable="false">
   <span class="products-price">
       $${price}
   </span>
   <div class="products-size">
       <select>
-          <option selected disabled>Choose a size</option>
-          <option>Small</option>
-          <option>Medium</option>
-          <option>Large</option>
-          <option>Extra-Large</option>
+          <option selected disabled>Elija un talle</option>
+          <option>Chico</option>
+          <option>Mediano</option>
+          <option>Grande</option>
+          <option>Extra grande</option>
       </select>
       <span class="custom-caret">
           <i class="fa-solid fa-caret-down"></i>
       </span>
   </div>
   <div class="products-cart" data-name="${title}" data-image="${image}" data-price="${price}" data-color="${color}">
-      <span>Add to cart</span>
+      <span>Agregar al carrito</span>
       <i class="fa-solid fa-cart-plus"></i>
   </div>
 </div>
@@ -174,12 +174,12 @@ const renderCartCard = (item) => {
   let { name, price, image, color, size } = item;
   return `
 <div class="cart-items-card">
-  <img src="${image}" alt="cart item preview" draggable="false">
+  <img src="${image}" alt="vista previa del artículo del carrito" draggable="false">
   <div class="cart-item-info">
-    <h4>${name} shirt</h4>
+    <h4>Remera ${name}</h4>
     <h5>${color}</h5>
     <h6>${size}</h6>
-    <p class="cart-item-price">Price: $${price}</p>
+    <p class="cart-item-price">Precio: $${price}</p>
   </div>
 </div>
   `;
@@ -208,12 +208,12 @@ const addProductToCart = () => {
       size = e.target.parentElement.children[3].children[0].value;
     let { name, price, image, color } = order;
     let shopItemData = getItemData(name, price, image, color, size);
-    if (size === "Choose a size") {
-      return renderMsg(false, "Please, select a shirt size");
+    if (size === "Elija un talle") {
+      return renderMsg(false, "Por favor, seleccione un talle de remera");
     } else {
       renderMsg(
         true,
-        `${shopItemData.name} ${shopItemData.color} shirt has been added to your cart`
+        `La remera ${shopItemData.name} ${shopItemData.color} se ha añadido a su carrito`
       );
       createShopItem(shopItemData);
       saveToLocalStorage(cartInfo);
@@ -257,8 +257,8 @@ const finishOrder = () => {
   cartPopup.addEventListener("click", (e) => {
     if (!e.target.classList.contains("btn-active")) {
       return;
-    } else if (confirm("Do you want to buy now?")) {
-      alert("Thanks for trusting us! :)");
+    } else if (confirm("¿Desea comprar ahora?")) {
+      alert("¡Gracias por confiar en nosotros! :)");
       cartInfo = [];
       renderTotal();
       saveToLocalStorage([]);

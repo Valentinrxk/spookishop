@@ -23,7 +23,7 @@ const renderDashboard = (user) => {
   <span class="log-out user-tab">
       <i class="fa-solid fa-door-open"></i>
       <a href="#" id="logout">
-      Logout
+      Cerrar sesión
       </a>
   </span>
   <span class="cart">
@@ -38,7 +38,7 @@ const renderDashboard = (user) => {
       </a></li>
   <li><a href="#" id="logout-hamburger">
         <i class="fa-solid fa-door-open"></i>
-          Logout
+          Cerrar sesión
       </a></li>
 </ul>
   `;
@@ -52,7 +52,7 @@ const renderDashboard = (user) => {
 };
 
 const logOut = (userDashboard, user) => {
-  if (confirm("Are you sure you want to log out?")) {
+  if (confirm("¿Está seguro de que desea cerrar sesión?")) {
     document.location.reload();
     userDashboard.style.display = "none";
     loginContainer.style.display = "flex";
