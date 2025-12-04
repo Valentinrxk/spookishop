@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SpookyShop shop page">
+    <title>Shop | SpookyShop</title>
+    <link rel="stylesheet" href="assets/css/shop.css" />
+    <link rel="stylesheet" href="assets/css/responsive-main-shop.css">
+    <script src="https://kit.fontawesome.com/b32c38a463.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="assets/img/ico.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader-container">
+        <span>SpookyShop</span>
+        <span>Loading...</span>
+        <span class="loader"></span>
+    </div>
+    <!-- Loader -->
+    <!-- Hamburger popup -->
+    <div class="hamburger-popup">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-angle-right"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#collection">
+                        <i class="fa-solid fa-angle-right"></i>
+                        Collections
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#aboutus">
+                        <i class="fa-solid fa-angle-right"></i>
+                        About us
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#contact">
+                        <i class="fa-solid fa-angle-right"></i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="hamburger-usertab">
+            <ul>
+                <li><a href="register.html">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Register
+                    </a></li>
+                <li><a href="login.html">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        Login
+                    </a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Hamburger popup -->
+    <!-- Cart popup -->
+    <div class="cart-popup">
+        <h2>Your order</h2>
+        <p class="empty-msg">Your cart is empty</p>
+        <div class="cart-items-card-container">
+        </div>
+        <div class="divider"></div>
+        <div class="total">
+            <span>Total:</span><span class="cart-total">$0</span>
+        </div>
+        <button type="button" class="cart-btn">Buy</button>
+        <button type="button" class="cart-btn clear-cart">Clear cart</button>
+    </div>
+    <!-- Cart popup -->
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <!-- overlay -->
+    <div class="shop-section section" id="main-page">
+        <div class="login" id="login">
+            <span class="user-tab u-register">
+                <i class="fa-solid fa-user-plus"></i>
+                <a href="register.html"> Register </a>
+            </span>
+            <span> | </span>
+            <span class="user-tab u-login">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <a href="login.html"> Login </a>
+            </span>
+            <span class="cart">
+                <i class="fa-solid fa-cart-shopping desktop-cart" id="cart"></i>
+            </span>
+        </div>
+        <header>
+            <!-- Hamburger menu -->
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- Hamburger menu -->
+            <!-- Mobile icon -->
+            <a href="index.html">
+                <img src="assets/img/ico.png" class="mobile-icon" alt="Icon of the website">
+            </a>
+            <!-- Mobile icon -->
+            <div class="title-container">
+                <span class="title"> SpookyShop </span>
+                <i class="fa-solid fa-ghost" title="Don't click me"></i>
+            </div>
+            <div class="nav-container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#collection">Collections</a></li>
+                        <li><a href="index.html#aboutus">About us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Cellphone cart -->
+            <i class="fa-solid fa-cart-shopping mobile-cart" id="mobile-cart"></i>
+            <!-- Cellphone cart -->
+        </header>
+        <div class="banner">
+            <div class="banner-body">
+                <h2>Shirts</h2>
+                <p>Take a look at all the different designs we have!</p>
+            </div>
+        </div>
+        <div class="shop">
+            <div class="shop-filters">
+                <h3>Filters</h3>
+                <div class="color-filter dropdown-closed">
+                    <h4><i class="fa-solid fa-caret-down"></i>By color</h4>
+                    <form id="filter-color-form">
+                        <label for="orange-cb">
+                            <input type="radio" id="orange-cb" name="color-radio">
+                            Orange
+                        </label>
+                        <label for="black-cb">
+                            <input type="radio" id="black-cb" name="color-radio">
+                            Black
+                        </label>
+                        <label for="pink-cb">
+                            <input type="radio" id="pink-cb" name="color-radio">
+                            Pink
+                        </label>
+                    </form>
+                </div>
+                <div class="genre-filter dropdown-closed">
+                    <h4><i class="fa-solid fa-caret-down"></i>Categories</h4>
+                    <form id="filter-categories-form">
+                        <label for="discount-cb">
+                            <input type="radio" id="discount-cb" name="genre-radio">
+                            Sale
+                        </label>
+                        <label for="new-cb">
+                            <input type="radio" id="new-cb" name="genre-radio">
+                            New collection
+                        </label>
+                    </form>
+                </div>
+                <span class="clear-filters">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                    Clear filters
+                </span>
+            </div>
+            <div class="shop-products">
+            </div>
+        </div>
+        <div class="msg">
+        </div>
+        <script src="assets/js/shop-loader.js" type="module"></script>
+        <script src="assets/js/hamburger.js"></script>
+        <script src="assets/js/cart.js"></script>
+        <script src="assets/js/shop.js"></script>
+        <script src="assets/js/index.js"></script>
+</body>
+
+</html>
